@@ -1,15 +1,15 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-nextamp-dev-115118-authRole",
-      "UnauthRoleArn": "arn:aws:iam::992382367299:role/amplify-nextamp-dev-115118-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::992382367299:role/amplify-nextamp-dev-115118-authRole",
+      "AuthRoleName": "amplify-nextamp-dev-123830-authRole",
+      "UnauthRoleArn": "arn:aws:iam::992382367299:role/amplify-nextamp-dev-123830-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::992382367299:role/amplify-nextamp-dev-123830-authRole",
       "Region": "ap-south-1",
-      "DeploymentBucketName": "amplify-nextamp-dev-115118-deployment",
-      "UnauthRoleName": "amplify-nextamp-dev-115118-unauthRole",
-      "StackName": "amplify-nextamp-dev-115118",
-      "StackId": "arn:aws:cloudformation:ap-south-1:992382367299:stack/amplify-nextamp-dev-115118/74ad8480-b8ee-11ee-9cea-0abd81d0de3c",
-      "AmplifyAppId": "d1f5j81fu9no25"
+      "DeploymentBucketName": "amplify-nextamp-dev-123830-deployment",
+      "UnauthRoleName": "amplify-nextamp-dev-123830-unauthRole",
+      "StackName": "amplify-nextamp-dev-123830",
+      "StackId": "arn:aws:cloudformation:ap-south-1:992382367299:stack/amplify-nextamp-dev-123830/0c6e0820-b8f5-11ee-b253-0231a6e7d2c5",
+      "AmplifyAppId": "d33280gvfma8c5"
     },
     "categories": {
       "api": {
