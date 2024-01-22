@@ -39,9 +39,9 @@ export default async function Home() {
     // const todos = data.listTodos.items;
   // }
 
-  console.log('get data todo list', data?.data?.listTodos);
+  console.log('get data todo list', JSON.stringify(data));
 
-  const todos: any[] =  data?.data?.listTodos;
+  const todos: any[] =  [];
 
 
 
@@ -67,11 +67,11 @@ export default async function Home() {
       )}
 
       {/* 4. Display todos*/}
-      <ul>
+      {/* <ul>
         {todos.length > 0 && todos.map((todo) => {
           return <li style={{ listStyle: 'none' }}>{todo.name}</li>;
         })}
-      </ul>
+      </ul> */}
     </div>
   );
 }
