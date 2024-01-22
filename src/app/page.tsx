@@ -14,7 +14,7 @@ const cookiesClient = generateServerClientUsingCookies({
 
 async function createTodo(formData: FormData) {
   'use server';
-  const { data } = await cookiesClient.graphql({
+  const data = await cookiesClient.graphql({
     query: mutations.createTodo,
     variables: {
       input: {
@@ -23,7 +23,7 @@ async function createTodo(formData: FormData) {
     }
   });
 
-  console.log('Created Todo: ', data?.createTodo);
+  console.log('Created Todo: ', JSON.stringify(data));
 
   revalidatePath('/');
 }
