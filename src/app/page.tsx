@@ -23,6 +23,7 @@ async function createTodo(formData: FormData) {
     }
   });
 
+
   console.log('Created Todo: ', JSON.stringify(data));
 
   revalidatePath('/');
@@ -30,11 +31,19 @@ async function createTodo(formData: FormData) {
 
 export default async function Home() {
   // 2. Fetch additional todos
-  const { data, errors } = await cookiesClient.graphql({
+  const data = await cookiesClient.graphql({
     query: queries.listTodos
   });
 
-  const todos = data.listTodos.items;
+  // if(data && data.listTodos && data.listTodos.item) {
+    // const todos = data.listTodos.items;
+  // }
+
+  console.log('get data todo list', data?.data?.listTodos);
+
+  const todos: any[] =  data?.data?.listTodos;
+
+
 
   return (
     <div
@@ -51,7 +60,7 @@ export default async function Home() {
       </form>
 
       {/* 3. Handle edge cases & zero state & error states*/}
-      {(!todos || todos.length === 0 || errors) && (
+      {todos.length === 0 && (
         <div>
           <p>No todos, please add one.</p>
         </div>
@@ -59,7 +68,7 @@ export default async function Home() {
 
       {/* 4. Display todos*/}
       <ul>
-        {todos.map((todo) => {
+        {todos.length > 0 && todos.map((todo) => {
           return <li style={{ listStyle: 'none' }}>{todo.name}</li>;
         })}
       </ul>
